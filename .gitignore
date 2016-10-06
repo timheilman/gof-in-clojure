@@ -10,3 +10,6 @@ pom.xml.asc
 *.class
 .hgignore
 .hg/
+/.idea/
+*.iml
+*~
