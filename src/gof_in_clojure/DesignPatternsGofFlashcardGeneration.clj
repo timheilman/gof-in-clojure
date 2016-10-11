@@ -1,3 +1,5 @@
+(ns gof-in-clojure.DesignPatternsGofFlashcardGeneration)
+
 (declare cartesian-product)
 (defn cartesian-product-on-nonempty-list [multiplicands]
       (for [firstElement (first multiplicands)
@@ -79,7 +81,9 @@
 (defn is-pattern-remedy-to-cause-of-redesign? [pattern causeOfRedesign]
       (contains? remedies (cons causeOfRedesign (cons pattern '()))))
 
-(map (fn [causeOfRedesignPatternPair]
+(defn cause-of-redesign-pattern-remedy-matrix-as-string-list
+  []
+  (map (fn [causeOfRedesignPatternPair]
          (str "True/false: the "
               ((first (rest causeOfRedesignPatternPair)) patterns)
               " pattern is a remedy to this cause of redesign: "
@@ -88,5 +92,6 @@
               (is-pattern-remedy-to-cause-of-redesign? (first (rest causeOfRedesignPatternPair)) (first causeOfRedesignPatternPair))
               "}}")
          )
-     (cartesian-product (cons (keys causesOfRedesign) (cons (keys patterns) '()))))
+       (cartesian-product (cons (keys causesOfRedesign) (cons (keys patterns) '()))))
+  )
 
