@@ -7,7 +7,7 @@
                        :tightCoupling              "Tight coupling"
                        :functionalityBySubclassing "Extending functionality by subclassing"
                        :inconvenientToAlter        "Inability to alter classes conveniently"})
-(def patterns '{:AbstractFactory       "Abstract Factory"
+(def patterns {:AbstractFactory        "Abstract Factory"
                 :Builder               "Builder"
                 :FactoryMethod         "Factory Method"
                 :Prototype             "Prototype"
