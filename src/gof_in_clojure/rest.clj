@@ -1,4 +1,4 @@
-(ns gof-in-clojure.DesignPatternsGofFlashcardGeneration)
+(ns gof-in-clojure.rest)
 
 (declare cartesian-product)
 (defn cartesian-product-on-nonempty-list [multiplicands]

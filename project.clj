@@ -3,4 +3,4 @@
                     "between patterns and common causes of redesign from section 1.6 of GoF Design Patterns")
   :url "http://github.com/timheilman"
   :dependencies [[org.clojure/clojure "1.8.0"]]
-  :main gof-in-clojure.core)
+  :main gof-in-clojure.main)

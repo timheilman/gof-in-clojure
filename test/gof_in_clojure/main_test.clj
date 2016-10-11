@@ -1,6 +1,6 @@
-(ns gof-in-clojure.core-test
+(ns gof-in-clojure.main-test
   (:require [clojure.test :refer :all]
-            [gof-in-clojure.core :refer :all]))
+            [gof-in-clojure.main :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

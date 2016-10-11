@@ -1,5 +1,5 @@
-(ns gof-in-clojure.core)
-(use 'gof-in-clojure.DesignPatternsGofFlashcardGeneration)
+(ns gof-in-clojure.main)
+(use 'gof-in-clojure.rest)
 (defn -main
   "I defer to another source file to test namespace/file accessibility rules."
   []
