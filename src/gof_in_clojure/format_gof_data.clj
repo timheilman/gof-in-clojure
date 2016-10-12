@@ -1,22 +1,6 @@
-(ns gof-in-clojure.rest)
-(use 'gof-in-clojure.data)
-
-(declare cartesian-product)
-(defn cartesian-product-on-nonempty-list [multiplicands]
-  (for [firstElement (first multiplicands)
-        remainingElements (cartesian-product (rest multiplicands))]
-    (cons firstElement remainingElements)))
-
-(defn cartesian-product [multiplicands]
-  (if (empty? multiplicands)
-    '(())                                                   ;; basecase list-of-lists b/c 1 way to cross-product 0 lists
-    (cartesian-product-on-nonempty-list multiplicands)
-    )
-  )
-
-
-(defn is-pattern-remedy-to-cause-of-redesign? [pattern causeOfRedesign]
-  (contains? remedies (cons causeOfRedesign (cons pattern '()))))
+(ns gof-in-clojure.format-gof-data)
+(use 'gof-in-clojure.gof-data)
+(use 'gof-in-clojure.cartesian)
 
 (defn cause-of-redesign-pattern-remedy-matrix-as-string-list
   []

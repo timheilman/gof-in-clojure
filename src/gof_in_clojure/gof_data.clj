@@ -1,4 +1,4 @@
-(ns gof-in-clojure.data)
+(ns gof-in-clojure.gof-data)
 (def causesOfRedesign {:explicitClass              "Creating objects by specifying a class explicitly"
                        :specificOperation          "Dependence on specific operations"
                        :hardwareSoftwarePlatform   "Dependence on hardware/software platform"
@@ -63,3 +63,7 @@
                 '(:inconvenientToAlter :Adapter)
                 '(:inconvenientToAlter :Decorator)
                 '(:inconvenientToAlter :Visitor)})
+
+;; todo: resolve question as to OO/procedural attachment of function to data here
+(defn is-pattern-remedy-to-cause-of-redesign? [pattern causeOfRedesign]
+  (contains? remedies (cons causeOfRedesign (cons pattern '()))))

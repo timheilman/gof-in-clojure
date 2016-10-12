@@ -1,6 +1,6 @@
-(ns gof-in-clojure.rest-test
+(ns gof-in-clojure.cartesian-test
   (:require [clojure.test :refer :all]
-            [gof-in-clojure.rest :refer :all]))
+            [gof-in-clojure.cartesian :refer :all]))
 
 (deftest test-base-case
   (testing "The cartesian product of 0 lists ought to be the empty list."
